@@ -32,7 +32,7 @@ namespace app.specs
 
           the_command_that_can_process.setup(x => x.can_process(request)).Return(true);
         };
-
+           
         Because b = () =>
           result = sut.get_the_command_that_can_process(request);
 

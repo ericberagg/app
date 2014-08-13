@@ -1,10 +1,20 @@
-﻿namespace app.web
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace app.web
 {
-  public class CommandRegistry : IFindCommandsThatCanProcessRequests
-  {
-    public IProcessOneRequest get_the_command_that_can_process(IProvideRequestDetails request)
+    public class CommandRegistry : IFindCommandsThatCanProcessRequests
     {
-      throw new System.NotImplementedException();
+        private readonly IEnumerable<IProcessOneRequest> commands;
+
+        public CommandRegistry(IEnumerable<IProcessOneRequest> commands)
+        {
+            this.commands = commands;
+        }
+
+        public IProcessOneRequest get_the_command_that_can_process(IProvideRequestDetails request)
+        {
+            return commands.Single(x => x.can_process(request));
+        }
     }
-  }
 }
