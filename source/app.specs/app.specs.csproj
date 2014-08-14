@@ -122,6 +122,7 @@
     <Compile Include="utility\ObjectFactory.cs" />
     <Compile Include="ViewDepartmentsOfDepartmentSpecs.cs" />
     <Compile Include="ViewTheMainDepartmentsInTheStoreSpecs.cs" />
+    <Compile Include="ViewTheProductsOfDepartmentSpecs.cs" />
     <Compile Include="WebFormDisplayEngineSpecs.cs" />
     <Compile Include="WebFormFactorySpecs.cs" />
   </ItemGroup>
