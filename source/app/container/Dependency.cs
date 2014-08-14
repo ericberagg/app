@@ -11,7 +11,7 @@ namespace app.container
 
     public static IFetchDependencies fetch
     {
-      get { throw new NotImplementedException(); }
+      get { return create_the_container(); }
     }
   }
 }
